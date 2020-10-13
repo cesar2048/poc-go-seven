@@ -8,5 +8,6 @@ import (
 
 func main() {
 	fmt.Println("Hola mundo")
-	fmt.Print(geometry.Point())
+	p1 := geometry.MakePoint(1, 2)
+	fmt.Print(p1.x)
 }
