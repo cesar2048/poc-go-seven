@@ -15,10 +15,16 @@ func main() {
 	fmt.Println(p2)*/
 	fmt.Println(p1.Getx())
 	/*using function circulo (MakeCircle) and methods ..*/
-	circulo := geometry.MakeCircle(5,(math.Pi/4))
+	circulo := geometry.MakeCircle(5,math.Pi/2)
 	fmt.Println(circulo.Getx())
 	fmt.Println(circulo.Gety())
-	circulo.Setangle(math.Pi/2) //change a 90 degre-->rad 
+	/*INICIO --- valores en main usando  funcion en donde recibimos obj por referencia (usando punteros)
+	angulotmp := (math.Pi/4)
+	circulo.Setangle(&angulotmp) //change a 90 degre-->rad 
+	fmt.Printf("angulotmp %v",angulotmp) ---FIN*/
+	angulotmp := (math.Pi/4)
+	circulo.Setangle(angulotmp) //change a 90 degre-->rad 
+	fmt.Println("nuevos valores con angulo cambiado")
 	fmt.Println(circulo.Getx())
 	fmt.Println(circulo.Gety())
 }
